@@ -22,7 +22,7 @@ Usage of serialcat:
   -raw
     	raw input mode
   -stop string
-    	stop bit() (default "none")
+    	stop bit(one/onepointfive/two) (default "one")
 ```
 
 ## Installation
