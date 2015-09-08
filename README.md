@@ -16,6 +16,7 @@ Usage of serialcat:
     	baud rate (default 4800)
   -bits int
     	data bits (default 8)
+  -l	list serial ports
   -parity string
     	parity bit(none/odd/even/mark/space) (default "none")
   -raw
