@@ -16,10 +16,23 @@ var (
 	parity = flag.String("parity", "none", "parity bit(none/odd/even/mark/space)")
 	stop   = flag.String("stop", "one", "stop bit(one/onepointfive/two)")
 	raw    = flag.Bool("raw", false, "raw input mode")
+	list   = flag.Bool("l", false, "list serial ports")
 )
 
 func main() {
 	flag.Parse()
+
+	if *list {
+		ports, err := serial.GetPortsList()
+		if err != nil {
+			fmt.Fprintln(os.Stderr, err)
+			os.Exit(1)
+		}
+		for _, ps := range ports {
+			fmt.Println(ps)
+		}
+		os.Exit(0)
+	}
 
 	if flag.NArg() != 1 {
 		flag.Usage()
