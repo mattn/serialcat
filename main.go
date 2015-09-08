@@ -5,7 +5,6 @@ import (
 	"flag"
 	"fmt"
 	"io"
-	//"log"
 	"os"
 
 	"github.com/facchinm/go-serial"
@@ -15,7 +14,7 @@ var (
 	baud   = flag.Int("baud", 4800, "baud rate")
 	bits   = flag.Int("bits", 8, "data bits")
 	parity = flag.String("parity", "none", "parity bit(none/odd/even/mark/space)")
-	stop   = flag.String("stop", "none", "stop bit()")
+	stop   = flag.String("stop", "one", "stop bit(one/onepointfive/two)")
 	raw    = flag.Bool("raw", false, "raw input mode")
 )
 
