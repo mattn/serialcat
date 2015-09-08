@@ -28,7 +28,7 @@ Usage of serialcat:
 ## Installation
 
 ```
-$ go get github.com/mattn/goserial
+$ go get github.com/mattn/serialcat
 ```
 
 ## License
